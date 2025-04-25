@@ -15,7 +15,7 @@ Automatically maintain greenhouse temperature and soil moisture at your set leve
 ![Screenshot_20250425_160604_SmartGreenHouse](https://github.com/user-attachments/assets/c99ed8af-a329-4dd4-b4da-07d7eab95f78)
 
 
-Features:
+For Esp32 codes and more information : [smart_greenhouse.pdf](https://github.com/user-attachments/files/19911477/smart_greenhouse.pdf)
 
 
 
