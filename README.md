@@ -1,21 +1,18 @@
-You can easily monitor your greenhouse's important data from anywhere in the world.
-
-![Screenshot_20250425_155653_SmartGreenHouse](https://github.com/user-attachments/assets/d6dbc32c-9ee9-428c-bee1-4a8d59d0eaca)
-
+# Smart Greenhouse
+Smart Greenhouse is an mobile application that connects to ESP32 via the internet and allows you to monitor and control the smart greenhouse system.
 
 
-You can turn the water pump, fan and ventilation on and off at any time from anywhere in the world.
+![SmartGreenhouse (1)](https://github.com/user-attachments/assets/6f599537-7e55-4757-a612-c5018fb915be)
 
-![Screenshot_20250425_155858_SmartGreenHouse](https://github.com/user-attachments/assets/4686978b-3d97-4316-abdc-721065b2e8b4)
+# Features
 
+- Real-time monitoring of data such as temperature, humidity, soil moisture level and water level.
+- Ability to turn pump, fan, and ventilation on and off from anywhere.
+- Adjust the angle of the ventilation.
+- Set a start and end time for these systems and turn them on and off at the desired time.
+- Set a value for temperature and soil moisture and keep the greenhouse automatically at those values.
 
-
-Automatically maintain greenhouse temperature and soil moisture at your set levels.
-
-![Screenshot_20250425_160604_SmartGreenHouse](https://github.com/user-attachments/assets/c99ed8af-a329-4dd4-b4da-07d7eab95f78)
-
-
-For Esp32 codes and more information : [smart_greenhouse.pdf](https://github.com/user-attachments/files/19911477/smart_greenhouse.pdf)
+For more information : [smart_greenhouse.pdf](https://github.com/user-attachments/files/19911477/smart_greenhouse.pdf)
 
 
 
