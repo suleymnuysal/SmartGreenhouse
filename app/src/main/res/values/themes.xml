@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartGreenHouse" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimaryDark">@color/dark_bg_color</item>
+    </style>
+
+    <style name="Theme.SmartGreenHouse" parent="Base.Theme.SmartGreenHouse" />
+</resources>

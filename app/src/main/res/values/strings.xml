@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartGreenHouse</string>
+    <string name="indicator">Indicator</string>
+    <string name="control">Control</string>
+    <string name="automation">Automation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

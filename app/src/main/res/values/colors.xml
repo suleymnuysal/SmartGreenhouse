@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_bg_color">#030303</color>
+    <color name="dark_card_view_color">#303030</color>
+    <color name="dark_text_color">#f0f0f0</color>
+    <color name="dark_time_text_color">#D8F0F0F0</color>
+    <color name="dark_circle_color">#666666</color>
+    <color name="button_on_color">#188e39</color>
+    <color name="button_off_color">#a81408</color>
+</resources>

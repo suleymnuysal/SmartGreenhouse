@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/dark_bg_color"
+    android:layout_height="match_parent"
+    tools:context=".view.ControlFragment">
+
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewWaterPump"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="12dp"
+        android:backgroundTint="@color/dark_card_view_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewWaterPump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Water Pump"
+                android:textColor="@color/dark_text_color"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonWaterPumpOn"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/button_on_color"
+                android:text="On"
+                android:textColor="@color/dark_text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonWaterPumpOff"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/waterPumpExpandable" />
+
+            <Button
+                android:id="@+id/buttonWaterPumpOff"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/button_off_color"
+                android:text="Off"
+                android:textColor="@color/dark_text_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/buttonWaterPumpOn"
+                app:layout_constraintTop_toBottomOf="@+id/waterPumpExpandable" />
+
+            <TextView
+                android:id="@+id/textViewWaterPumpStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Status: "
+                android:textColor="@color/dark_text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWaterPump" />
+
+            <ImageView
+                android:id="@+id/imageViewWaterPump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/waterPumpAddTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?selectableItemBackground"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWaterPumpStatus">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Timer"
+                    android:textColor="@color/dark_text_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/waterPumpAddTimerImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/baseline_keyboard_arrow_down_24" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/waterPumpExpandable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/waterPumpAddTimer">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewWaterPumpStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="?selectableItemBackground"
+                        android:text="djfpsjfpo"
+                        android:textColor="@color/dark_text_color"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewWaterPumpEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="?selectableItemBackground"
+                        android:text="fsafhıosejfı"
+                        android:textColor="@color/dark_text_color"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textViewWaterPumpClearTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="?selectableItemBackground"
+                        android:text="Clear Time"
+                        android:textColor="@color/dark_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewWaterPumpTimeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/dark_time_text_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/waterPumpAddTimer"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewWaterPumpTimerDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="1dp"
+                android:text="---"
+                app:layout_constraintStart_toEndOf="@+id/waterPumpAddTimer"
+                app:layout_constraintTop_toTopOf="@+id/waterPumpAddTimer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cardViewVentilation"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="16dp"
+         android:layout_marginEnd="16dp"
+         android:layout_marginTop="16dp"
+         android:backgroundTint="@color/dark_card_view_color"
+         app:cardCornerRadius="12dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/cardViewFan">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+             <me.tankery.lib.circularseekbar.CircularSeekBar
+                 android:id="@+id/circularSeekBarVentilationAngle"
+                 android:layout_width="120dp"
+                 android:layout_height="110dp"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginEnd="16dp"
+                 app:cs_circle_color="@color/dark_circle_color"
+                 app:cs_circle_progress_color="#2962FF"
+                 app:cs_circle_stroke_width="12sp"
+                 app:cs_end_angle="15"
+                 app:cs_max="90"
+                 app:cs_pointer_stroke_width="18sp"
+                 app:cs_progress="93"
+                 app:cs_start_angle="165"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <TextView
+                 android:id="@+id/textViewVentilation"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="16dp"
+                 android:text="Ventilation"
+                 android:textColor="@color/dark_text_color"
+                 android:textSize="24dp"
+                 android:textStyle="bold"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <Button
+                 android:id="@+id/buttonVentilationOn"
+                 android:layout_width="150dp"
+                 android:layout_height="48dp"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:backgroundTint="@color/button_on_color"
+                 android:text="On"
+                 android:textColor="@color/dark_text_color"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/buttonVentilationOff"
+                 app:layout_constraintHorizontal_bias="0.5"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/ventilationExpandable" />
+
+             <Button
+                 android:id="@+id/buttonVentilationOff"
+                 android:layout_width="150dp"
+                 android:layout_height="48dp"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:backgroundTint="@color/button_off_color"
+                 android:text="Off"
+                 android:textColor="@color/dark_text_color"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.5"
+                 app:layout_constraintStart_toEndOf="@+id/buttonVentilationOn"
+                 app:layout_constraintTop_toBottomOf="@+id/ventilationExpandable" />
+
+             <TextView
+                 android:id="@+id/textViewVentilationStatus"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="8dp"
+                 android:text="Status: "
+                 android:textColor="@color/dark_text_color"
+                 android:textSize="16sp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textViewVentilation" />
+
+
+             <TextView
+                 android:id="@+id/textViewVentilationAngleValue"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="6dp"
+                 android:layout_marginEnd="8dp"
+                 android:textColor="@color/dark_text_color"
+                 android:textSize="15sp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <LinearLayout
+                 android:id="@+id/ventilationAddTimer"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="8dp"
+                 android:background="?selectableItemBackground"
+                 android:orientation="horizontal"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textViewVentilationStatus">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Add Timer"
+                     android:textColor="@color/dark_text_color"
+                     android:textSize="16sp" />
+
+                 <ImageView
+                     android:id="@+id/ventilationAddTimerImageView"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="6dp"
+                     android:layout_marginEnd="8dp"
+                     android:src="@drawable/baseline_keyboard_arrow_down_24" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:id="@+id/ventilationExpandable"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:orientation="horizontal"
+                 android:visibility="gone"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/ventilationAddTimer">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/textViewVentilationStartTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:background="?selectableItemBackground"
+                         android:textColor="@color/dark_text_color"
+                         android:textSize="16sp"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintTop_toTopOf="parent" />
+
+                     <TextView
+                         android:id="@+id/textViewVentilationEndTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:layout_marginBottom="8dp"
+                         android:background="?selectableItemBackground"
+                         android:textColor="@color/dark_text_color"
+                         android:textSize="16sp" />
+
+                 </LinearLayout>
+
+                 <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+                     <TextView
+                         android:id="@+id/textViewVentilationClearTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginEnd="16dp"
+                         android:background="?selectableItemBackground"
+                         android:text="Clear Time"
+                         android:textColor="@color/dark_text_color"
+                         android:textSize="14sp"
+                         android:textStyle="bold"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toTopOf="parent" />
+
+                 </androidx.constraintlayout.widget.ConstraintLayout>
+             </LinearLayout>
+
+             <TextView
+                 android:id="@+id/textViewVentilationTimeValue"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="24dp"
+                 android:layout_marginBottom="2dp"
+                 android:textColor="@color/dark_time_text_color"
+                 android:textSize="14sp"
+                 app:layout_constraintBottom_toBottomOf="@+id/ventilationAddTimer"
+                 app:layout_constraintEnd_toEndOf="parent" />
+
+             <TextView
+                 android:id="@+id/textViewVentilationTimerDisplay"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="4dp"
+                 android:layout_marginTop="1dp"
+                 android:text="---"
+                 app:layout_constraintStart_toEndOf="@+id/ventilationAddTimer"
+                 app:layout_constraintTop_toTopOf="@+id/ventilationAddTimer" />
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
+
+
+     <androidx.cardview.widget.CardView
+         android:id="@+id/cardViewFan"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="16dp"
+         android:layout_marginEnd="16dp"
+         android:backgroundTint="@color/dark_card_view_color"
+         app:cardCornerRadius="12dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/cardViewWaterPump">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <TextView
+                 android:id="@+id/textViewFan"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="16dp"
+                 android:text="Fan"
+                 android:textColor="@color/dark_text_color"
+                 android:textSize="24dp"
+                 android:textStyle="bold"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <Button
+                 android:id="@+id/buttonFanOn"
+                 android:layout_width="150dp"
+                 android:layout_height="48dp"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:backgroundTint="@color/button_on_color"
+                 android:text="On"
+                 android:textColor="@color/dark_text_color"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/buttonFanOff"
+                 app:layout_constraintHorizontal_bias="0.5"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/fanExpandable" />
+
+             <Button
+                 android:id="@+id/buttonFanOff"
+                 android:layout_width="150dp"
+                 android:layout_height="48dp"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginBottom="8dp"
+                 android:backgroundTint="@color/button_off_color"
+                 android:text="Off"
+                 android:textColor="@color/dark_text_color"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintHorizontal_bias="0.5"
+                 app:layout_constraintStart_toEndOf="@+id/buttonFanOn"
+                 app:layout_constraintTop_toBottomOf="@+id/fanExpandable" />
+
+             <TextView
+                 android:id="@+id/textViewFanStatus"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="8dp"
+                 android:text="Status: "
+                 android:textColor="@color/dark_text_color"
+                 android:textSize="16sp"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textViewFan" />
+
+             <ImageView
+                 android:id="@+id/imageViewFan"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="16dp"
+                 android:layout_marginEnd="24dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintTop_toTopOf="parent" />
+
+             <LinearLayout
+                 android:id="@+id/fanAddTimer"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginTop="8dp"
+                 android:orientation="horizontal"
+                 android:background="?selectableItemBackground"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/textViewFanStatus">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Add Timer"
+                     android:textColor="@color/dark_text_color"
+                     android:textSize="16sp" />
+
+                 <ImageView
+                     android:id="@+id/fanAddTimerImageView"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="6dp"
+                     android:layout_marginEnd="8dp"
+                     android:src="@drawable/baseline_keyboard_arrow_down_24" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:id="@+id/fanExpandable"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:orientation="horizontal"
+                 android:visibility="gone"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/fanAddTimer">
+
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <TextView
+                         android:id="@+id/textViewFanStartTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:textSize="16sp"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginEnd="8dp"
+                         android:background="?selectableItemBackground"
+                         android:textColor="@color/dark_text_color"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintTop_toTopOf="parent" />
+
+                     <TextView
+                         android:id="@+id/textViewFanEndTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginBottom="8dp"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginEnd="8dp"
+                         android:textSize="16sp"
+                         android:background="?selectableItemBackground"
+                         android:textColor="@color/dark_text_color"/>
+
+
+                 </LinearLayout>
+                 <androidx.constraintlayout.widget.ConstraintLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent">
+
+                     <TextView
+                         android:id="@+id/textViewFanClearTime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="8dp"
+                         android:layout_marginEnd="16dp"
+                         android:background="?selectableItemBackground"
+                         android:text="Clear Time"
+                         android:textColor="@color/dark_text_color"
+                         android:textSize="14sp"
+                         android:textStyle="bold"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         app:layout_constraintTop_toTopOf="parent" />
+
+                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+             </LinearLayout>
+
+             <TextView
+                 android:id="@+id/textViewFanTimeValue"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="24dp"
+                 android:layout_marginBottom="2dp"
+                 android:textColor="@color/dark_time_text_color"
+                 android:textSize="14sp"
+                 app:layout_constraintBottom_toBottomOf="@+id/fanAddTimer"
+                 app:layout_constraintEnd_toEndOf="parent" />
+
+             <TextView
+                 android:id="@+id/textViewFanTimerDisplay"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="4dp"
+                 android:layout_marginTop="1dp"
+                 android:text="---"
+                 app:layout_constraintStart_toEndOf="@+id/fanAddTimer"
+                 app:layout_constraintTop_toTopOf="@+id/fanAddTimer" />
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

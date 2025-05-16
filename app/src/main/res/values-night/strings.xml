@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="indicator">Indicator</string>
+    <string name="control">Control</string>
+    <string name="automation">Automation</string>
+</resources>
